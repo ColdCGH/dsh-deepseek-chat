@@ -2,26 +2,26 @@
 
 > DeepSeek Harness 网页对话入口插件 —— 在侧边栏"新对话"按钮正下方显示一个"网页对话"按钮，点击打开 [chat.deepseek.com](https://chat.deepseek.com/)。
 
-![dsh](https://img.shields.io/badge/dsh-plugin-web-4D6BFE) ![version](https://img.shields.io/badge/version-0.2.1-4D6BFE) ![license](https://img.shields.io/badge/license-MIT-green)
+![dsh](https://img.shields.io/badge/dsh-plugin-web-4D6BFE) ![version](https://img.shields.io/badge/version-0.2.2-4D6BFE) ![license](https://img.shields.io/badge/license-MIT-green)
 
 ## ✨ 特性
 
 - **位置自然**：按钮位于侧边栏**新对话按钮正下方**，宽度/高度/悬停动效与 harness 原生控件完全一致，展开态显示「网页对话」，收起态为 36px 图标（响应即时，无轮询延迟）
 - **桌面独立窗口**：在 [dsh-desktop](https://gitee.com/coldcgh/dsh-desktop)（Wails v3 启动器）下运行时，点击按钮通过本地桥接 API（`127.0.0.1` 随机端口 + 每实例随机 token）让启动器打开**独立聊天子窗口**——主窗口（harness 页面）不再被导航霸占，可同时多任务
 - **Web 环境降级**：纯浏览器 / 第三方桌面壳（无 `window.__DSH_DESKTOP_API__` 桥接）时自动降级为原行为（当前 webview 内跳转），插件功能永不失效
-- **持久化开关**：设置页可开关入口（`deepseek-chat.showEntry`，默认开）
+- **持久化开关**：设置页可开关入口（`dsh-deepseek-chat.showEntry`，默认开）
 
 ## 📦 安装
 
 ```bash
 # 方式一：Gitee Release 下载 tgz 后安装（推荐）
-# https://gitee.com/coldcgh/dsh-deepseek-chat/releases/download/0.2.1/coldcgh-dsh-deepseek-chat-0.2.1.tgz
-curl -L -o dsh-deepseek-chat.tgz https://gitee.com/coldcgh/dsh-deepseek-chat/releases/download/0.2.1/coldcgh-dsh-deepseek-chat-0.2.1.tgz
+# https://gitee.com/coldcgh/dsh-deepseek-chat/releases/download/0.2.2/coldcgh-dsh-deepseek-chat-0.2.2.tgz
+curl -L -o dsh-deepseek-chat.tgz https://gitee.com/coldcgh/dsh-deepseek-chat/releases/download/0.2.2/coldcgh-dsh-deepseek-chat-0.2.2.tgz
 dsh plugin --profile web add ./dsh-deepseek-chat.tgz
 
 # 方式二：从源码构建安装（开发测试）
-cd deepseek-chat && npm pack
-dsh plugin --profile web add ./coldcgh-dsh-deepseek-chat-0.2.1.tgz
+cd dsh-deepseek-chat && npm pack
+dsh plugin --profile web add ./coldcgh-dsh-deepseek-chat-0.2.2.tgz
 ```
 
 重启 harness 后，侧边栏"新对话"按钮正下方出现「网页对话」按钮。
@@ -59,7 +59,7 @@ cordis.patch.yml bundle patch：把插件加入 web roster
 
 ```bash
 npm pack          # 构建本地 tgz
-dsh plugin --profile web add ./coldcgh-dsh-deepseek-chat-0.2.1.tgz
+dsh plugin --profile web add ./coldcgh-dsh-deepseek-chat-0.2.2.tgz
 ```
 
 ## 📝 License

@@ -16,3 +16,8 @@
 ## 0.1.0-rc.6 (2026-08-17)
 
 - 首批：侧边栏"网页对话"入口（sidebar.footer.action）+ 设置开关（内嵌 exe 分发阶段）
+
+## 0.2.2 (2026-08-17)
+
+- **Fix**: client.js 模块头 `__ModuleLoader__.load` 的 id 更新为 `@coldcgh/dsh-deepseek-chat`（修复包名变更后 harness 报 failed to import loader entry 的加载失败）
+
