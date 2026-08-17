@@ -11,11 +11,12 @@ DeepSeek Harness 网页对话入口插件：在 web UI 侧边栏底部（设置�
 ## 安装
 
 ```bash
-# 方式一：从 npm 安装
-dsh plugin --profile web add @deepseek-ai/dsh-chat-entry
+# 方式一：Gitee Release 下载 tgz 后安装（当前推荐）
+# https://gitee.com/coldcgh/dsh-chat-entry/releases/download/0.2.0/deepseek-ai-dsh-chat-entry-0.2.0.tgz
+dsh plugin --profile web add ./deepseek-ai-dsh-chat-entry-0.2.0.tgz
 
-# 方式二：本地包安装（开发测试）
-npm pack
+# 方式二：从源码目录直接安装（开发测试）
+cd dsh-chat-entry && npm pack
 dsh plugin --profile web add ./deepseek-ai-dsh-chat-entry-0.2.0.tgz
 ```
 
