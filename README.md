@@ -14,12 +14,15 @@
 ## 📦 安装
 
 ```bash
-# 方式一：Gitee Release 下载 tgz 后安装（推荐）
+# 方式一：npm 官方安装（推荐）
+dsh plugin --profile web add @coldcgh/dsh-deepseek-chat
+
+# 方式二：Gitee Release tgz（无 npm registry 时）
 # https://gitee.com/coldcgh/dsh-deepseek-chat/releases/download/0.2.3/coldcgh-dsh-deepseek-chat-0.2.3.tgz
 curl -L -o dsh-deepseek-chat.tgz https://gitee.com/coldcgh/dsh-deepseek-chat/releases/download/0.2.3/coldcgh-dsh-deepseek-chat-0.2.3.tgz
 dsh plugin --profile web add ./dsh-deepseek-chat.tgz
 
-# 方式二：从源码构建安装（开发测试）
+# 方式三：从源码构建安装（开发测试）
 cd dsh-deepseek-chat && npm pack
 dsh plugin --profile web add ./coldcgh-dsh-deepseek-chat-0.2.3.tgz
 ```

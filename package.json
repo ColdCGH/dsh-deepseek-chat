@@ -35,6 +35,9 @@
     "web-chat"
   ],
   "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  },
   "dependencies": {
     "react": "^18.2.0",
     "@deepseek-ai/dsh-client-runtime": "^0.1.0-rc.5"
