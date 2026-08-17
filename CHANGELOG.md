@@ -2,7 +2,7 @@
 
 ## 0.2.1 (2026-08-17)
 
-- **包名变更**：`@deepseek-ai/dsh-chat-entry` → **`@coldcgh/deepseek-chat`**（回归自有 scope）
+- **包名变更**：`@deepseek-ai/dsh-chat-entry` → **`@coldcgh/dsh-deepseek-chat`**（回归自有 scope）
 - **依赖瘦身**：移除 `@deepseek-ai/cordis`、`@deepseek-ai/dsh-client-ui-primitives`、`@deepseek-ai/dsh-client-ui-slots`（均未实际引用，消除宿主共享包遮蔽警告），仅保留 `react` + `dsh-client-runtime`
 - 侧边栏按钮：悬停动效（`--dsw-alias-button-floating-hover` + 120ms 过渡）、与新对话按钮等宽等高、图标大小对齐（14px/18px）、下方 10px 边距
 - 挂载响应：`MutationObserver` 即时挂载（替代 400ms 轮询），折叠/展开切换无延迟
