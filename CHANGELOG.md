@@ -21,3 +21,8 @@
 
 - **Fix**: client.js 模块头 `__ModuleLoader__.load` 的 id 更新为 `@coldcgh/dsh-deepseek-chat`（修复包名变更后 harness 报 failed to import loader entry 的加载失败）
 
+
+## 0.2.3 (2026-08-17)
+
+- **Fix/提升**：侧边栏收起/展开动画对齐 harness——不销毁重建（DOM 常驻 + CSS 过渡），收起播放同款 rail-in 滑入动画（150ms translateX 49px），展开 wide-in 淡入；图标尺寸 14/18px 同步过渡
+
