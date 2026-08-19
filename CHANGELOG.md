@@ -1,5 +1,12 @@
 # Changelog
 
+## 0.2.8 (2026-08-19)
+
+- **Fix（真实 harness 实测）**：
+  1. **收起成 rail 后图标不再卡在「hover 背景」**：原 hover 逻辑用闭包固定宽态 `baseBg`，mouseleave 会把它重置回宽态白底 → rail 图标一直显示白底。改为**按当前模式取底色/hover 色**（存储到 `host.refs.baseBg/hoverBg`，`updateEntry` 切换时更新；wide=primary fill/浮起 hover，rail=透明/交互浅底）
+  2. **第一次收起不再闪动/抽搐**：锚点原带 `background-color 120ms` 过渡，收起时宽→透明要淡 120ms，首收会带一块白底滑过去。去掉背景色过渡，`updateEntry` 按模式**即时**设基准底色，收起滑入全程透明
+- 展开回宽态背景正常恢复（无回归）；收起动画同步逻辑（0.2.7）保持不变
+
 ## 0.2.7 (2026-08-19)
 
 - **收起动画最终修正（真实 harness 逐帧实测通过）**：网页对话入口**与其他图标动作完全一致**——侧边栏收起时一起淡出、一起 snap 到 rail、一起从右往左滑入，全程与「新会话」按钮**逐帧锁定同步**（同 x / 同 opacity / 同 translateX），无隐藏空窗、无晚半拍再入
