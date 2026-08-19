@@ -26,3 +26,18 @@
 
 - **Fix/提升**：侧边栏收起/展开动画对齐 harness——不销毁重建（DOM 常驻 + CSS 过渡），收起播放同款 rail-in 滑入动画（150ms translateX 49px），展开 wide-in 淡入；图标尺寸 14/18px 同步过渡
 
+## 0.2.4 (2026-08-17)
+
+- **动画优化**：
+  - 使用 `requestAnimationFrame` 替代 `void offsetWidth` 触发动画，减少延迟
+  - 添加 `will-change: transform, opacity` GPU 加速提示，提升流畅度
+  - 优化 easing 函数为 `cubic-bezier(0.25, 0.1, 0.25, 1)`
+  - Rail-in 动画 translateX 从 49px 调整为 30px（更自然的滑入距离）
+- **平滑过渡**：
+  - 新增 enter/exit CSS 过渡动画，按钮显示/消失不再突兀
+  - 显示时淡入+下移（150ms），消失时淡出+上移（150ms）
+- **稳定性**：
+  - 使用 `useRef` 管理组件内部状态，避免快速切换时的竞态问题
+  - 退出动画定时器可被新的挂载取消，防止 DOM 被意外移除
+  - 轮询间隔从 150ms 缩短到 100ms，响应更快
+
