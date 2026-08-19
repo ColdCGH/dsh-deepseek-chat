@@ -2,7 +2,7 @@
 
 > DeepSeek Harness 网页对话入口插件 —— 在侧边栏"新对话"按钮正下方显示一个"网页对话"按钮，点击打开 [chat.deepseek.com](https://chat.deepseek.com/)。
 
-![dsh](https://img.shields.io/badge/dsh-plugin-web-4D6BFE) ![version](https://img.shields.io/badge/version-0.2.5-4D6BFE) ![license](https://img.shields.io/badge/license-MIT-green)
+![dsh](https://img.shields.io/badge/dsh-plugin-web-4D6BFE) ![version](https://img.shields.io/badge/version-0.2.6-4D6BFE) ![license](https://img.shields.io/badge/license-MIT-green)
 
 ## ✨ 特性
 
@@ -18,13 +18,13 @@
 dsh plugin --profile web add @coldcgh/dsh-deepseek-chat
 
 # 方式二：Gitee Release tgz（无 npm registry 时）
-# https://gitee.com/coldcgh/dsh-deepseek-chat/releases/download/0.2.5/coldcgh-dsh-deepseek-chat-0.2.5.tgz
-curl -L -o dsh-deepseek-chat.tgz https://gitee.com/coldcgh/dsh-deepseek-chat/releases/download/0.2.5/coldcgh-dsh-deepseek-chat-0.2.5.tgz
+# https://gitee.com/coldcgh/dsh-deepseek-chat/releases/download/0.2.6/coldcgh-dsh-deepseek-chat-0.2.6.tgz
+curl -L -o dsh-deepseek-chat.tgz https://gitee.com/coldcgh/dsh-deepseek-chat/releases/download/0.2.6/coldcgh-dsh-deepseek-chat-0.2.6.tgz
 dsh plugin --profile web add ./dsh-deepseek-chat.tgz
 
 # 方式三：从源码构建安装（开发测试）
 cd dsh-deepseek-chat && npm pack
-dsh plugin --profile web add ./coldcgh-dsh-deepseek-chat-0.2.5.tgz
+dsh plugin --profile web add ./coldcgh-dsh-deepseek-chat-0.2.6.tgz
 ```
 
 重启 harness 后，侧边栏"新对话"按钮正下方出现「网页对话」按钮。
@@ -62,7 +62,7 @@ cordis.patch.yml bundle patch：把插件加入 web roster
 
 ```bash
 npm pack          # 构建本地 tgz
-dsh plugin --profile web add ./coldcgh-dsh-deepseek-chat-0.2.5.tgz
+dsh plugin --profile web add ./coldcgh-dsh-deepseek-chat-0.2.6.tgz
 ```
 
 ## 📝 License
