@@ -1,5 +1,15 @@
 # Changelog
 
+## 0.2.5 (2026-08-19)
+
+- **回退 0.2.4 动画改动，恢复 0.2.3 已验证的收起/展开滑动动画**（侧边栏收起时 rail-in 滑入 + DOM 常驻不重建，用户实测效果好）
+- 撤销 0.2.4 引入的回归根因：
+  - `playEntryAnimation` 不再用 `requestAnimationFrame` 推迟一帧（改回同步 `void offsetWidth` 触发），消除「先闪一下再滑」的卡顿/闪烁
+  - 动画填充改回 `backwards`（0.2.4 用 `forwards`，动画开始前元素停在可见态导致闪烁）
+  - 移除 enter/exit 过渡类与 rail 滑动动画在宿主上的互相打架
+  - `unmountBelowEntry` 改回立即移除（不再播 160ms exit 动画再删，避免 DOM 被破坏重建闪烁）
+  - `ChatEntry` 恢复 `useEffect([show])` 单依赖（0.2.4 扩成 `[show,wide,cleanup]` 会让 rail 切换时重建监听）
+
 ## 0.2.1 (2026-08-17)
 
 - **包名变更**：`@deepseek-ai/dsh-chat-entry` → **`@coldcgh/dsh-deepseek-chat`**（回归自有 scope）
